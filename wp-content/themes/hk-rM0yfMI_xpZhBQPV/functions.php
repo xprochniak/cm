@@ -71,11 +71,12 @@ add_action('wp_enqueue_scripts', function () {
         'body' .
         "{ font-family: 'Roboto I50'; }" .
 
-        'h1,h2,h3,h4,h5,h6' .
-        "{ font-family: 'Lora I50'; }" .
+        'h1,h2,h3,h4,h5,h6,' .
+        '.elementor-heading-title' .
+        "{ font-family: 'Lora I50'; font-style: italic; }" .
 
         'ol,ul' .
-        '{ list-style: none; }' .
+        '{ list-style-type: none; }' .
 
         'blockquote,q' .
         '{ quotes: none; }' .
@@ -86,9 +87,9 @@ add_action('wp_enqueue_scripts', function () {
     );
 }, 0);
 
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('hk', get_template_directory_uri() . '/hk.js', array(), null, true);
-}, 0);
+//add_action('wp_enqueue_scripts', function () {
+//    wp_enqueue_script('hk', get_template_directory_uri() . '/hk.js', array(), null, true);
+//}, 0);
 
 add_action('wp_enqueue_scripts', function () {
     wp_dequeue_style('classic-theme-styles');
