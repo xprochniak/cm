@@ -62,7 +62,9 @@ add_action('wp_enqueue_scripts', function () {
 
         'article,aside,details,figcaption,figure,' .
         'footer,header,hgroup,menu,nav,section' .
-        'picture,img,svg' .
+        '{ display: block; }' .
+
+        'picture,img' .
         '{ display: block; }' .
 
         'body' .
